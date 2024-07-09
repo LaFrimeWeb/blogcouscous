@@ -1,0 +1,149 @@
+/* Resetting default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styles */
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  min-height: 100vh;
+  color: #000000;
+  gap: 14px;
+  font-family: 'Arial', sans-serif;
+  background-color:#e2e8f0
+}
+
+/* Layout Container Styles */
+header,
+main,
+footer {
+  max-width: 1200px; /* Augmenté pour accueillir trois cartes par ligne */
+  margin: 0 auto;
+  width: 100%;
+}
+
+header {
+  padding: 14px 0;
+  border-bottom: 2px solid #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Link Styles */
+header a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Search Bar Styles */
+.search-bar {
+  width: 100px; /* Largeur réduite */
+  padding: 12px 20px; /* Ajustement du padding pour une largeur augmentée */
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #1e293b;
+  background-color: #515050;
+}
+.search-input {
+  width: 300px; /* Définissez la largeur souhaitée */
+  padding: 10px; /* Ajoutez du rembourrage pour plus de confort */
+}
+
+/* Main Content Styles */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Post Container Styles */
+.postsContainer {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.postCard {
+  padding: 14px;
+  color: #000000; /* Texte en blanc */
+  background-color: #979595;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease-in-out;
+  height: 300px; /* Hauteur fixe */
+}
+
+.postCard:hover {
+  transform: translateY(-5px);
+  border-color: #cbd5e1;
+}
+
+.postCard > p {
+  flex: 1;
+  color: inherit; /* Le texte hérite de la couleur blanche */
+}
+
+/* Stats Container Styles */
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* Unstyled Link Styles */
+.unstyled {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Article Styles */
+article div {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+article div ul {
+  list-style-position: inside;
+}
+
+/* Footer Styles */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #66686a;
+  color: #ffffff;
+  border-top: 2px solid #e2e8f0;
+}
+
+/* Media Query for larger screens */
+@media (min-width: 640px) {
+  body {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .postsContainer {
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
+    gap: 24px;
+  }
+
+  .postCard {
+    padding: 24px;
+    height: 350px; /* Hauteur fixe ajustée pour les grands écrans */
+  }
+}
